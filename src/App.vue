@@ -3,8 +3,8 @@
         <section class="section">
             <div class="container">
                 <h3 class="title is-1">
-                    <a href="https://github.com/LasseHaslev/vue-item-picker">
-                        @lassehaslev/vue-item-picker
+                    <a href="https://github.com/LasseHaslev/vue-item-input">
+                        @lassehaslev/vue-item-input
                     </a>
                 </h3>
             </div>
