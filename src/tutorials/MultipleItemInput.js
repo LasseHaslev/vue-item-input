@@ -5,7 +5,7 @@ export default {
             <section class="section">
                 <div class="container">
                     <h3 class="title is-2">
-                        Image picker
+                        Multiple select
                     </h3>
                     <h4 class="subtitle is-4">Open a image picker</h4>
                     <p>We have created a image picker with the logic of the @lassehaslev/vue-item-picker</p>

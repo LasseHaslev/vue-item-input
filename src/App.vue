@@ -10,8 +10,7 @@
             </div>
         </section>
 
-        <simple-item-input></simple-item-input>
-        <!--<multiple-image-picker></multiple-image-picker>-->
+        <multiple-item-input></multiple-item-input>
 
         <div class="hero is-primary">
             <div class="hero-body">
@@ -24,7 +23,7 @@
 </template>
 
 <script>
-import SimpleItemInput from './tutorials/SimpleItemInput';
+import MultipleItemInput from './tutorials/MultipleItemInput';
 export default {
     name: 'app',
     data () {
@@ -32,7 +31,7 @@ export default {
         }
     },
     components: {
-        SimpleItemInput,
+        MultipleItemInput,
     }
 }
 </script>
