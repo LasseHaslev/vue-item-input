@@ -25,6 +25,7 @@ export default {
 
         selectValue( item, index ) {
             this.$set( this.itemValues, index, item );
+            this.$emit( 'changed', this.itemValues );
         },
 
         addValue( item ) {
