@@ -2,6 +2,8 @@ import { BaseInput } from '../../index';
 import ImageInputItem from './ImageInputItem';
 export default {
     template:`
+    <div>
+        <pre>{{ values }}</pre>
         <div class="columns is-mobile is-multiline">
             <div v-for="value in values" class="column is-2">
                 <image-input-item @select-value="selectValue" :value="value"></image-input-item>
@@ -10,6 +12,7 @@ export default {
                 <div style="background-color:blue; padding-bottom: 100%" @click="addEmptyValue"></div>
             </div>
         </div>
+    </div>
     `,
 
     mixins: [ BaseInput ],

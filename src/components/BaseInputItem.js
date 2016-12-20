@@ -9,6 +9,7 @@ export default {
 
     methods: {
         selectItem(item) {
+            this.value = item;
             this.$emit( 'select-item', item );
         },
     },
