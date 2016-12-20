@@ -30,6 +30,15 @@ export default {
         </div>
     `,
 
+    data() {
+        return {
+            preselected: {
+                id: 7,
+                url: 'http://placehold.it/600/b0f7cc',
+            }
+        }
+    },
+
     components: {
         ImageInput,
     }

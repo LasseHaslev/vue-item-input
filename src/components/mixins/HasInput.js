@@ -16,7 +16,9 @@ export default {
     computed: {
         ids() {
             var self = this;
-            return this.values.map( function( value ) {
+            return this.itemValues.filter( function( value ) {
+                return value != undefined;
+            } ).map( function( value ) {
                 return self.valueId( value );
             } );
         },

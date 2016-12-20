@@ -1,9 +1,7 @@
 export default {
     props: {
         values: {
-            default() {
-                return [];
-            },
+            default: null,
         },
         'value-id': {
             type: Function,
@@ -19,7 +17,7 @@ export default {
     },
 
     computed: {
-        values() {
+        pureValues() {
             return this.itemValues.filter( function( value ) {
                 return value != undefined;
             } );
@@ -32,10 +30,11 @@ export default {
         };
     },
 
-    mounted() {
+    created() {
         this.itemValues = this.values;
-        if (!this.multiple) {
-            this.addEmptyValue();
+
+        if ( !this.multiple ) { 
+            this.itemValues = [ this.values ];
         }
     },
 
@@ -46,7 +45,12 @@ export default {
 
         selectValue( item, index ) {
             this.$set( this.itemValues, index, item );
-            this.$emit( 'changed', this.itemValues );
+            if ( this.multiple ) {
+                this.$emit( 'changed', this.itemValues );
+            }
+            else {
+                this.$emit( 'changed', this.itemValues[0] );
+            }
         },
 
         addValue( item ) {
