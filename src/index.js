@@ -1,7 +1,7 @@
 import BaseInput from './components/BaseInput';
 import BaseInputItem from './components/BaseInputItem';
-
 import BaseInputElement from './components/mixins/BaseInputElement';
+
 import HasInput from './components/mixins/HasInput';
 import HasValues from './components/mixins/HasValues';
 
@@ -12,10 +12,9 @@ export {
     BaseInput,
     BaseInputItem,
 
-    BaseInputElement,
-
     HasInput,
     HasValue,
 
+    BaseInputElement,
     InputElement,
 }
