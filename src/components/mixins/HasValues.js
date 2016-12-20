@@ -5,6 +5,12 @@ export default {
                 return [];
             },
         },
+        'value-id': {
+            type: Function,
+            default( value ) {
+                return value.id;
+            }
+        }
     },
 
     computed: {

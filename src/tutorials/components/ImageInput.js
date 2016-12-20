@@ -1,5 +1,7 @@
 import { BaseInput } from '../../index';
+import { InputItem } from '../../index';
 import ImageInputItem from './ImageInputItem';
+
 export default {
     template:`
     <div>
@@ -12,6 +14,7 @@ export default {
                 <div style="background-color:blue; padding-bottom: 100%" @click="addEmptyValue"></div>
             </div>
         </div>
+        <input-item :name="name" :values="ids"></input-item>
     </div>
     `,
 
@@ -19,5 +22,6 @@ export default {
 
     components: {
         ImageInputItem,
+        InputItem,
     }
 }
