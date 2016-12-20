@@ -5,7 +5,7 @@ export default {
             <div>
                 <div @click="open" 
                     style="
-                        padding-bottom: 100%
+                        padding-bottom: 100%;
                         background-size: contain;
                         background-position: center;
                         background-repeat: no-repeat;

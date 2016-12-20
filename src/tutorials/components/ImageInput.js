@@ -7,8 +7,6 @@ export default {
     <div>
         <div class="columns is-mobile is-multiline">
             <div v-for="( value, index ) in itemValues" class="column is-2">
-        <pre>
-        </pre>
                 <image-input-item @remove="remove" @select="selectValue" :index="index" :value="value"></image-input-item>
             </div>
             <div class="column is-2" style="cursor:pointer;">
