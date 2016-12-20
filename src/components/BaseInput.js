@@ -8,6 +8,19 @@ export default {
         },
     },
 
+    computed: {
+        values() {
+            return this.itemValues.filter( function( value ) {
+                return value != undefined;
+            } );
+        },
+        ids() {
+            return this.values.map( function( value ) {
+                return value.id;
+            } );
+        },
+    },
+
     data() {
         return {
             itemValues: [],
