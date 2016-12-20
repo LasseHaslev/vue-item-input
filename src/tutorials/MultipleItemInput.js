@@ -19,7 +19,7 @@ export default {
         <div class="container is-fluid">
             <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
                 :multiple="true"
-                :values="[null]"
+                :values="preselected"
                 name="images[]"
                 ref="imageInput"></image-input>
         </div>
@@ -27,6 +27,18 @@ export default {
             </section>
         </div>
     `,
+
+    data() {
+        return {
+            preselected: [
+            {
+                id: 7,
+                url: 'http://placehold.it/600/b0f7cc',
+            },
+            null
+            ],
+        }
+    },
 
     components: {
         ImageInput,

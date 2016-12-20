@@ -21,6 +21,7 @@ export default {
                 <div class="column is-3">
                     <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
                         name="image"
+                        :values="preselected"
                         ref="imageInput"></image-input>
                 </div>
             </div>
