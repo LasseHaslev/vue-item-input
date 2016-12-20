@@ -10,6 +10,7 @@
             </div>
         </section>
 
+        <single-item-input></single-item-input>
         <multiple-item-input></multiple-item-input>
 
         <div class="hero is-primary">
@@ -24,6 +25,7 @@
 
 <script>
 import MultipleItemInput from './tutorials/MultipleItemInput';
+import SingleItemInput from './tutorials/SingleItemInput';
 export default {
     name: 'app',
     data () {
@@ -32,6 +34,7 @@ export default {
     },
     components: {
         MultipleItemInput,
+        SingleItemInput,
     }
 }
 </script>
