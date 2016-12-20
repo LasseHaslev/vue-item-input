@@ -18,6 +18,7 @@ export default {
 
         <div class="container is-fluid">
             <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
+                :multiple="true"
                 :values="[null]"
                 name="images[]"
                 ref="imageInput"></image-input>

@@ -10,6 +10,11 @@ export default {
             default( value ) {
                 return value.id;
             }
+        },
+
+        multiple: {
+            type: Boolean,
+            default: false,
         }
     },
 

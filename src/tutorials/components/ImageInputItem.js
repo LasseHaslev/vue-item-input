@@ -20,8 +20,6 @@ export default {
                 :item-adaptor="imageAdaptor"
                 @confirm="selectItem"
                 ref="imagePicker"></image-picker>
-
-                <button @click="remove" class="button is-danger is-fullwidth">Remove</button>
             </div>
     `,
 

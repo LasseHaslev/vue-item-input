@@ -17,10 +17,13 @@ export default {
                 <div class="hero-body">
 
         <div class="container is-fluid">
-            <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
-                :values="[null]"
-                name="images[]"
-                ref="imageInput"></image-input>
+            <div class="columns is-mobile">
+                <div class="column is-3">
+                    <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
+                        name="image"
+                        ref="imageInput"></image-input>
+                </div>
+            </div>
         </div>
                 </div>
             </section>
