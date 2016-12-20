@@ -11,7 +11,7 @@ export default {
         },
         showInput: {
             type: Boolean,
-            default: true,
+            default: false,
         },
     },
 

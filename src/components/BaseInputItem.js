@@ -15,6 +15,9 @@ export default {
         selectItem(item) {
             this.$emit( 'select', item, this.index );
         },
+        remove() {
+            this.$emit( 'remove', this.index );
+        }
     },
 
 }

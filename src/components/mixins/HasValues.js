@@ -44,5 +44,12 @@ export default {
         addValue( item ) {
             this.itemValues.push(null);
         },
+
+        remove( index ) {
+            console.log(index);
+            // this.selectValue( null, index );
+            this.itemValues.splice( index, 1 );
+            
+        }
     },
 }
