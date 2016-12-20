@@ -10,8 +10,12 @@ export default {
 
     data() {
         return {
-            inputImages: [],
+            itemValues: [],
         };
+    },
+
+    mounted() {
+        this.itemValues = this.values;
     },
 
     methods: {
@@ -19,12 +23,12 @@ export default {
             this.addValue( null );
         },
 
-        selectValue( item ) {
-            this.addValue( item );
+        selectValue( item, index ) {
+            this.$set( this.itemValues, index, item );
         },
 
         addValue( item ) {
-            this.values.push(null);
+            this.itemValues.push(null);
         },
     },
 

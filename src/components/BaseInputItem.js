@@ -4,13 +4,16 @@ export default {
         value: {
             default: null,
             required: true,
-        }
+        },
+        index: {
+            type: Number,
+            required: true,
+        },
     },
 
     methods: {
         selectItem(item) {
-            this.value = item;
-            this.$emit( 'select-item', item );
+            this.$emit( 'select', item, this.index );
         },
     },
 
