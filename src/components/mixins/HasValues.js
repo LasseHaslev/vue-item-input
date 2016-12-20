@@ -34,6 +34,9 @@ export default {
 
     mounted() {
         this.itemValues = this.values;
+        if (!this.multiple) {
+            this.addEmptyValue();
+        }
     },
 
     methods: {
@@ -50,11 +53,12 @@ export default {
             this.itemValues.push(null);
         },
 
+        zeroOut( index ) {
+            this.$set( this.itemValues, index, null );
+        },
+
         remove( index ) {
-            console.log(index);
-            // this.selectValue( null, index );
             this.itemValues.splice( index, 1 );
-            
         }
     },
 }

@@ -15,7 +15,10 @@ export default {
                 <div style="background-color:blue; padding-bottom: 100%" @click="addEmptyValue"></div>
             </div>
         </div>
-        <image-input-item v-else @remove="remove" @select="selectValue" :value="itemValues"></image-input-item>
+        <div v-else v-for="( value, index ) in itemValues">
+            <image-input-item @select="selectValue" :index="index" :value="value"></image-input-item>
+            <button @click="zeroOut( index )" class="button is-warning is-fullwidth">Empty value</button>
+        </div>
         <input-element :name="name" :values="ids"></input-element>
     </div>
     `,
