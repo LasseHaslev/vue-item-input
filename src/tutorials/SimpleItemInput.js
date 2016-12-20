@@ -1,4 +1,4 @@
-import ImagePicker from './components/ImagePicker';
+import ImageInput from './components/ImageInput';
 export default {
     template: `
         <div>
@@ -17,66 +17,19 @@ export default {
             </section>
             <section class="hero is-light">
                 <div class="hero-body">
-                    <div class="columns is-mobile">
-                        <div class="column is-2 is-offset-5">
-            <div style="padding-bottom: 100%"
-                @click="open"
-                :style="{
-                    'background-image': selectedImage ? 'url(' + selectedImage.url + ')' : '',
-                    'background-size':'contain',
-                    'background-position':'center',
-                    'background-repeat': 'no-repeat',
-                    'background-color': '#ccc',
-                    'cursor':'pointer',
-                }"></div>
-                        </div>
-                    </div>
 
-                    <div class="has-text-centered">
-                        <a @click="open" class="button is-primary is-large" href="#">Open image picker</a>
-                    </div>
-                    <image-picker url="https://jsonplaceholder.typicode.com/photos?limit=10"
+        <div class="container is-fluid">
+            <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
                     :items-adaptor="imagesAdaptor"
                     :item-adaptor="imageAdaptor"
-                    :selected="selected"
-@confirm="selectImage"
-                    ref="imagePicker"></image-picker>
+                    ref="imageInput"></image-input>
+        </div>
                 </div>
             </section>
         </div>
     `,
 
-    data() {
-        return{
-            selected: [ {
-                id: 6
-            } ],
-
-            selectedImage: null,
-
-        }
-    },
-
-    methods: {
-        open() {
-            this.$refs.imagePicker.open();
-        },
-        imagesAdaptor( images ) {
-            // return images;
-            return images.slice( 0, 20 );
-        },
-        imageAdaptor( image ) {
-            return {
-                id: image.id,
-                url: image.url,
-            };
-        },
-        selectImage( image ) {
-            this.selectedImage = image;
-        }
-    },
-
     components: {
-        ImagePicker,
+        ImageInput,
     }
 }
