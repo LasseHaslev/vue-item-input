@@ -4,7 +4,7 @@ export default {
     template: `
             <div>
                 <div @click="open" style="padding-bottom: 100%" :style="{
-                    'background-image': image ? 'url(' + image.path + ')' : false,
+                    'background-image': value ? 'url(' + value.path + ')' : false,
                     'background-size':'contain',
                     'background-position':'center',
                     'background-repeat': 'no-repeat',
@@ -12,10 +12,10 @@ export default {
                     'cursor':'pointer',
                 }">
                 </div>
-                <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
+                <image-picker url="https://jsonplaceholder.typicode.com/photos?limit=10"
                 :items-adaptor="imagesAdaptor"
                 :item-adaptor="imageAdaptor"
-                ref="imageInput"></image-input>
+                ref="imagePicker"></image-picker>
             </div>
     `,
 
@@ -34,6 +34,9 @@ export default {
 
 
     methods: {
+        open() {
+            this.$refs.imagePicker.open();
+        },
         imagesAdaptor( images ) {
             // return images;
             return images.slice( 0, 20 );

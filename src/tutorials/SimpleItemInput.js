@@ -8,10 +8,8 @@ export default {
                         Image picker
                     </h3>
                     <h4 class="subtitle is-4">Open a image picker</h4>
-        <p>We have created a image picker with the logic of the @lassehaslev/vue-item-picker</p>
-
-        <br>
-
+                    <p>We have created a image picker with the logic of the @lassehaslev/vue-item-picker</p>
+                    <br>
 
                 </div>
             </section>
@@ -20,8 +18,6 @@ export default {
 
         <div class="container is-fluid">
             <image-input url="https://jsonplaceholder.typicode.com/photos?limit=10"
-                    :items-adaptor="imagesAdaptor"
-                    :item-adaptor="imageAdaptor"
                     ref="imageInput"></image-input>
         </div>
                 </div>

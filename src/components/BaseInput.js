@@ -1,8 +1,10 @@
 export default {
 
     props: {
-        value: {
-            default: [],
+        values: {
+            default() {
+                return [];
+            },
         },
     },
 
@@ -17,12 +19,12 @@ export default {
             this.addValue( null );
         },
 
-        onSelect( item ) {
+        selectValue( item ) {
             this.addValue( item );
         },
 
         addValue( item ) {
-            this.value.push(null);
+            this.values.push(null);
         },
     },
 
