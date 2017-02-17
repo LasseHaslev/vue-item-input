@@ -1,7 +1,7 @@
 {
   "name": "@lassehaslev/vue-item-input",
   "description": "Vue 2 form item logic for selecting custom objects",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "main": "dist/index.js",
   "private": false,
